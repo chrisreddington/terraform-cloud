@@ -1,9 +1,9 @@
 variable "hostname" {
-  type = string
+  type = "string"
 }
 
 variable "token" {
-  type = string
+  type = "string"
 }
 
 # Configure the Terraform Enterprise Provider
