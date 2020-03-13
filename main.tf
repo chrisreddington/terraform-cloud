@@ -11,6 +11,9 @@ variable "scope" {
   type = string
 }
 
+data "azurerm_client_config" "current" {
+}
+
 # Configure the Microsoft Azure Active Directory Provider
 provider "azuread" {
   version = "~> 0.3"
