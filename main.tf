@@ -1,3 +1,6 @@
+provider "tfe" {
+}
+
 # Create an organization
 #resource "tfe_organization" "org" {
 #  name = "Theatreers"
