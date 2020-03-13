@@ -13,7 +13,7 @@ variable "scope" {
 
 # Configure the Microsoft Azure Active Directory Provider
 provider "azuread" {
-  version = "=0.3.0"
+  version = "~> 0.3"
 }
 
 # Configure the Azure Provider
