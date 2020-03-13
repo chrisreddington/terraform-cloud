@@ -1,4 +1,3 @@
-# Define variables
 variable "hostname" {
   type = string
 }
@@ -9,8 +8,8 @@ variable "token" {
 
 # Configure the Terraform Enterprise Provider
 provider "tfe" {
-  hostname = "${var.hostname}"
-  token    = "${var.token}"
+  hostname = var.hostname
+  token    = var.token
 }
 
 # Create an organization
