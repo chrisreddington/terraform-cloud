@@ -14,6 +14,10 @@ variable "scope" {
 data "azurerm_client_config" "current" {
 }
 
+data "azurerm_subscription" "scoped_subscription" {
+  subscription_id = var.scope
+}
+
 # Configure the Microsoft Azure Active Directory Provider
 provider "azuread" {
   version = "~> 0.3"
@@ -51,7 +55,7 @@ resource "azuread_application_password" "example" {
 }
 
 resource "azurerm_role_assignment" "example" {
-  scope                = var.scope
+  scope                = data.azurerm_subscription.scoped_subscription.id
   role_definition_name = "Contributor"
   principal_id         = azuread_application.example.application_id
 }
