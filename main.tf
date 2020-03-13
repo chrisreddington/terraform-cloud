@@ -40,7 +40,7 @@ resource "azuread_application" "example" {
 
 # Create a service principal
 resource "azuread_service_principal" "example" {
-  application_id = azuread_application.example.application_object_id
+  application_object_id = azuread_application.example.application_id
 }
 
 # Create a service principal secret
