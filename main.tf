@@ -2,12 +2,11 @@ variable "hostname" {
   type = string
 }
 
-variable "token" {
-  type = string
-}
 
 # Configure the Terraform Enterprise Provider
-provider "tfe" {}
+provider "tfe" {
+  hostname = var.hostname  
+  }
 
 # Create an organization
 resource "tfe_organization" "org" {
