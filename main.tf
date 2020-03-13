@@ -2,10 +2,10 @@ provider "tfe" {
 }
 
 # Create an organization
-#resource "tfe_organization" "org" {
-#  name = "Theatreers"
-#  email = "chris@theatreers.com"
-#}
+resource "tfe_organization" "org" {
+  name = "Theatreers"
+  email = "chris@theatreers.com"
+}
 
 # Dummy Test
 resource "tfe_workspace" "test" {
