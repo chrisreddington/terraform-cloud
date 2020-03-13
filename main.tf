@@ -57,7 +57,7 @@ resource "azuread_application_password" "example" {
 resource "azurerm_role_assignment" "example" {
   scope                = data.azurerm_subscription.scoped_subscription.id
   role_definition_name = "Contributor"
-  principal_id         = azuread_application.example.application_id
+  principal_id         = azuread_service_principal.example.application_id
 }
 
 # Configure the Terraform Enterprise Provider
