@@ -7,7 +7,7 @@ provider "tfe" {
 # Create an organization
 resource "tfe_organization" "org" {
   name = "Theatreers"
-  email = "chris@theatreers.com
+  email = "chris@theatreers.com"
 }
 
 # Dummy Test
